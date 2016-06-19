@@ -1,0 +1,19 @@
+@import "utils/reset";
+@import "utils/layout";
+@import "lib/compass-mixins/lib/compass";
+@import "lib/bootstrap-sass/assets/stylesheets/bootstrap";
+
+table.ellipsed-table {
+  tr td {
+    max-width: 100px;
+    @include ellipsis();
+  }
+}
+
+h1 {
+  color: red;
+}
+
+.alice{
+  background-color: aliceblue;
+}
