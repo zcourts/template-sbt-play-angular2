@@ -1,17 +1,26 @@
-name := "Play + Angular 2"
+name := "allied.earth"
 
 version := "1.0"
 
-lazy val PlayAngular2 = (project in file(".")).enablePlugins(PlayScala)
+lazy val AlliedEarth = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
+incOptions := incOptions.value.withNameHashing(true)
+updateOptions := updateOptions.value.withCachedResolution(cachedResoluton = true)
 
 libraryDependencies ++= Seq( jdbc , cache , ws   , specs2 % Test,
   "org.webjars.bower" % "compass-mixins" % "1.0.2",
   "org.webjars" % "bootstrap" % "4.0.0-alpha.2",
   //angular2 dependencies
-  "org.webjars.npm" % "angular2" % "2.0.0-beta.17",
-  "org.webjars.npm" % "systemjs" % "0.19.26",
+  //"org.webjars.npm" % "angular2" % "2.0.0-beta.17",
+  "org.webjars.npm" % "zcourts-angular-master" % "2.0.0-rc.2-master",
+  "org.webjars.npm" % "systemjs" % "0.19.31",
+  "org.webjars.npm" % "angular__common" % "2.0.0-rc.2",
+  "org.webjars.npm" % "angular__compiler" % "2.0.0-rc.2",
+  "org.webjars.npm" % "angular__core" % "2.0.0-rc.2",
+  "org.webjars.npm" % "angular__platform-browser" % "2.0.0-rc.2",
+  "org.webjars.npm" % "angular__router" % "3.0.0-alpha.7",
+  "org.webjars.npm" % "angular__upgrade" % "2.0.0-rc.2",
   "org.webjars.npm" % "todomvc-common" % "1.0.2",
   "org.webjars.npm" % "rxjs" % "5.0.0-beta.7",
   "org.webjars.npm" % "es6-promise" % "3.1.2",

@@ -16,3 +16,6 @@ dist
 
     
 node_modules
+project/.sbtserver
+project/.sbtserver.lock
+project/sbt-ui.sbt
